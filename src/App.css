@@ -1,34 +1,4 @@
-/* App.css */
-.App {
-  background-color: #ffccd5; /* Light pink background */
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Arial', sans-serif;
-}
-
-.App-header {
-  text-align: center;
-  padding: 20px;
-}
-
-button {
-  background-color: #ff4d6d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #e60039;
-}
-
-/* App.css */
+/* General Styles */
 body {
   background-color: #ffe4e6; /* Soft pink background */
   font-family: 'Arial', sans-serif;
@@ -36,6 +6,41 @@ body {
   padding: 0;
 }
 
+/* App Container */
+.App {
+  background-color: #ffccd5; /* Light pink background */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+.App-header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Buttons */
+button, .front-button {
+  background-color: #ff4d6d;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .front-button:hover {
+  background-color: #d90429;
+}
+
+/* Main Front Container */
 .front-container {
   display: flex;
   flex-direction: column;
@@ -46,14 +51,17 @@ body {
   padding: 20px;
 }
 
+/* Card */
 .front-card {
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 30px;
   max-width: 500px;
+  width: 90%;
 }
 
+/* Text Styles */
 .front-heading {
   font-size: 2.5rem;
   font-weight: bold;
@@ -66,22 +74,7 @@ body {
   margin-top: 15px;
 }
 
-.front-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background-color: #ff4d6d;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.front-button:hover {
-  background-color: #d90429;
-}
-
+/* Flower Section */
 .flower-container {
   display: flex;
   flex-direction: column;
@@ -92,26 +85,30 @@ body {
   padding: 20px;
 }
 
+/* Letter Box */
 .letter-box {
-  width: auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 100px;
+  font-size: 80px;
   cursor: pointer;
+  width: 100%;
+  max-width: 400px;
 }
 
-
+/* Bouquet Image */
 .bouquet {
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
+/* Letter Content */
 .letter-content {
   margin-top: 20px;
   padding: 20px;
   max-width: 400px;
+  width: 90%;
   text-align: center;
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -119,3 +116,49 @@ body {
   font-size: 18px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .front-heading {
+    font-size: 2rem;
+  }
+
+  .front-text {
+    font-size: 1rem;
+  }
+
+  .front-card {
+    padding: 20px;
+  }
+
+  .flower-container {
+    padding: 10px;
+  }
+
+  .letter-box {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .front-heading {
+    font-size: 1.8rem;
+  }
+
+  .front-text {
+    font-size: 0.9rem;
+  }
+
+  .front-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .letter-box {
+    font-size: 50px;
+  }
+}
